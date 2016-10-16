@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Array where Element: Hashable {
+extension Array where Element: Diffable {
     public func apply(steps: [DiffStep<Element>]) -> [Element] {
         var copy = self
 

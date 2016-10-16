@@ -8,9 +8,12 @@
 
 import Foundation
 
+/// A diffable object must be Equatable and provide one hashable identifier.
 public protocol Diffable: Equatable {
     associatedtype HashType: Hashable
 
+    /// The hashable identifier. This is used to map each object and find updates.
+    /// If your object conforms to Hashable, this property is provided automatically.
     var diffIdentifier: HashType { get }
 }
 
@@ -22,6 +25,7 @@ public extension Diffable where Self: Hashable {
 
 extension String: Diffable {}
 extension Int: Diffable {}
+extension Int64: Diffable {}
 extension Double: Diffable {}
 extension Float: Diffable {}
 extension NSObject: Diffable {}

@@ -14,14 +14,14 @@ public enum DiffStep<T> {
     case Move(value: T, fromIndex: Int, toIndex: Int)
     case Update(value: T, index: Int)
 
-    public var isInsertion: Bool {
+    public var isInsert: Bool {
         switch self {
         case .Insert: return true
         default: return false
         }
     }
 
-    public var isDeletion: Bool {
+    public var isDelete: Bool {
         switch self {
         case .Delete: return true
         default: return false
@@ -42,6 +42,7 @@ public enum DiffStep<T> {
         }
     }
 
+    /// The value associated to this step.
     public var value: T {
         switch self {
         case let .Insert(value, _): return value
@@ -51,6 +52,7 @@ public enum DiffStep<T> {
         }
     }
 
+    /// The index associated to this step. In case of Move, it's the toIndex.
     public var index: Int {
         switch self {
         case let .Insert(_, index): return index
