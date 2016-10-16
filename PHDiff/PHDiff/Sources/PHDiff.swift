@@ -27,7 +27,7 @@ public struct PHDiff {
         for (j, ref) in context.OA.enumerated() {
             deleteOffsets[j] = runningOffset
             if ref.symbol != nil {
-                steps.append(.Delete(value: context.fromArray[j], index: j))
+                steps.append(.delete(value: context.fromArray[j], index: j))
                 runningOffset += 1
             }
         }
@@ -40,7 +40,7 @@ public struct PHDiff {
             if let j = ref.index {
                 // Check if there was a update
                 if context.toArray[i] != context.fromArray[j] {
-                    steps.append(.Update(value: context.toArray[i], index: i))
+                    steps.append(.update(value: context.toArray[i], index: i))
                 }
 
                 // Calculate the offset and determine if there was a move
@@ -48,10 +48,10 @@ public struct PHDiff {
                 let insertOffset = runningOffset
                 let deleteOffset = deleteOffsets[j]
                 if (j - deleteOffset + insertOffset) != i {
-                    steps.append(.Move(value: context.toArray[i], fromIndex: j, toIndex: i))
+                    steps.append(.move(value: context.toArray[i], fromIndex: j, toIndex: i))
                 }
             } else {
-                steps.append(.Insert(value: context.toArray[i], index: i))
+                steps.append(.insert(value: context.toArray[i], index: i))
                 runningOffset += 1
             }
         }
@@ -70,18 +70,18 @@ public struct PHDiff {
 
         for step in unorderedSteps {
             switch step {
-            case .Insert:
+            case .insert:
                 insertions.append(step)
 
-            case let .Delete(_, fromIndex):
+            case let .delete(_, fromIndex):
                 indexedDeletions[fromIndex].append(step)
 
-            case let .Move(value, fromIndex, toIndex):
+            case let .move(value, fromIndex, toIndex):
                 // Convert Move to Insert + Delete
-                insertions.append(.Insert(value: value, index: toIndex))
-                indexedDeletions[fromIndex].append(.Delete(value: value, index: fromIndex))
+                insertions.append(.insert(value: value, index: toIndex))
+                indexedDeletions[fromIndex].append(.delete(value: value, index: fromIndex))
 
-            case .Update:
+            case .update:
                 updates.append(step)
             }
         }

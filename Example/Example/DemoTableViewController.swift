@@ -38,14 +38,14 @@ final class DemoTableViewController: UITableViewController {
 
             steps.forEach { step in
                 switch step {
-                case let .Insert(_, index):
+                case let .insert(_, index):
                     insertions.append(IndexPath(row: index, section: 0))
-                case let .Delete(_, index):
+                case let .delete(_, index):
                     deletions.append(IndexPath(row: index, section: 0))
-                case let .Move(_, fromIndex, toIndex):
+                case let .move(_, fromIndex, toIndex):
                     deletions.append(IndexPath(row: fromIndex, section: 0))
                     insertions.append(IndexPath(row: toIndex, section: 0))
-                case let .Update(_, index):
+                case let .update(_, index):
                     reloads.append(IndexPath(row: index, section: 0))
                 }
             }

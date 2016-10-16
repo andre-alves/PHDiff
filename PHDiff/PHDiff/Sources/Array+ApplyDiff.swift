@@ -14,17 +14,17 @@ extension Array where Element: Diffable {
 
         for step in steps {
             switch step {
-            case let .Insert(value, index):
+            case let .insert(value, index):
                 copy.insert(value, at: index)
 
-            case let .Delete(_, index):
+            case let .delete(_, index):
                 copy.remove(at: index)
 
-            case let .Move(value, fromIndex, toIndex):
+            case let .move(value, fromIndex, toIndex):
                 copy.remove(at: fromIndex)
                 copy.insert(value, at: toIndex)
 
-            case let .Update(value, index):
+            case let .update(value, index):
                 copy[index] = value
             }
         }

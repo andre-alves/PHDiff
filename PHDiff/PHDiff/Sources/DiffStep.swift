@@ -9,35 +9,35 @@
 import Foundation
 
 public enum DiffStep<T> {
-    case Insert(value: T, index: Int)
-    case Delete(value: T, index: Int)
-    case Move(value: T, fromIndex: Int, toIndex: Int)
-    case Update(value: T, index: Int)
+    case insert(value: T, index: Int)
+    case delete(value: T, index: Int)
+    case move(value: T, fromIndex: Int, toIndex: Int)
+    case update(value: T, index: Int)
 
     public var isInsert: Bool {
         switch self {
-        case .Insert: return true
+        case .insert: return true
         default: return false
         }
     }
 
     public var isDelete: Bool {
         switch self {
-        case .Delete: return true
+        case .delete: return true
         default: return false
         }
     }
 
     public var isMove: Bool {
         switch self {
-        case .Move: return true
+        case .move: return true
         default: return false
         }
     }
 
     public var isUpdate: Bool {
         switch self {
-        case .Update: return true
+        case .update: return true
         default: return false
         }
     }
@@ -45,20 +45,20 @@ public enum DiffStep<T> {
     /// The value associated to this step.
     public var value: T {
         switch self {
-        case let .Insert(value, _): return value
-        case let .Delete(value, _): return value
-        case let .Move(value, _, _): return value
-        case let .Update(value, _): return value
+        case let .insert(value, _): return value
+        case let .delete(value, _): return value
+        case let .move(value, _, _): return value
+        case let .update(value, _): return value
         }
     }
 
     /// The index associated to this step. In case of Move, it's the toIndex.
     public var index: Int {
         switch self {
-        case let .Insert(_, index): return index
-        case let .Delete(_, index): return index
-        case let .Move(_, _, toIndex): return toIndex
-        case let .Update(_, index): return index
+        case let .insert(_, index): return index
+        case let .delete(_, index): return index
+        case let .move(_, _, toIndex): return toIndex
+        case let .update(_, index): return index
         }
     }
 }
@@ -66,13 +66,13 @@ public enum DiffStep<T> {
 extension DiffStep: CustomStringConvertible {
     public var description: String {
         switch self {
-        case let .Insert(value, index):
+        case let .insert(value, index):
             return "Insert \(value) at index: \(index)"
-        case let .Delete(value, index):
+        case let .delete(value, index):
             return "Delete \(value) at index: \(index)"
-        case let .Move(value, fromIndex, toIndex):
+        case let .move(value, fromIndex, toIndex):
             return "Move \(value) from index: \(fromIndex) to index: \(toIndex)"
-        case let .Update(value, index):
+        case let .update(value, index):
             return "Update \(value) at index: \(index)"
         }
     }
