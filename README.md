@@ -10,10 +10,6 @@ PHDiff can answer that by calculating the needed Inserts, Deletes, Moves and Upd
 
 **PHDiff can also provide batch updates for UITableView and UICollectionView changes**, it can be used right on the main queue because it's lightning fast.
 
-The main goal of this project is to provide a very simple and swifty solution to the array diff problem.
-
-Pull Requests are welcome.
-
 
 ## Requirements
 
@@ -82,8 +78,6 @@ print(a.apply(steps: steps)) // apply each operation to the array
 
 **steps(fromArray:toArray:)** calculates Inserts, Deleted, Moves and Updates to be used only with batch operations (i.e: UITableView and UICollectionView batch updates).
 
-Example of UITableView batch update:
-
 ```swift
     private func updateTableView(newColors: [DemoColor]) {
         let steps = PHDiff.steps(fromArray: self.colors, toArray: newColors)
@@ -124,13 +118,12 @@ Example of UITableView batch update:
 - Both methods are linear in complexity and space.
 - Do **not** apply the result from steps(fromArray:toArray:) to the 'fromArray'. The result is not ordered in a way that it expects the indexes offset changes caused by each other step. If you need this type of result, use **orderedSteps** instead.
 
+
 In order to diff your models, they need to conform to the Diffable protocol:
 
 #### Diffable Protocol
 
 Diffable extends the Equatable protocol by providing one **diffIdentifier**. It can be a String, Int or anything that conforms to the Hashable protocol. You can think of it as a unique key to represent your object.
-
-Example:
 
 ```swift
 struct DemoColor: Diffable {
