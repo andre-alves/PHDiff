@@ -1,6 +1,6 @@
 ## PHDiff
 
-A very efficient **diff algorithm** implementend in Swift with linear complexity in both time and space.
+Is a very efficient **diff algorithm** implementend in Swift with linear complexity in both time and space.
 
 Based on Paul Heckel's paper: [A technique for isolating differences between files](http://dl.acm.org/citation.cfm?id=359467&dl=ACM&coll=DL&CFID=679858074&CFTOKEN=32818190).
 
