@@ -92,14 +92,14 @@ print(a.apply(steps: steps)) // apply each operation to the array
 
             steps.forEach { step in
                 switch step {
-                case let .Insert(_, index):
+                case let .insert(_, index):
                     insertions.append(IndexPath(row: index, section: 0))
-                case let .Delete(_, index):
+                case let .delete(_, index):
                     deletions.append(IndexPath(row: index, section: 0))
-                case let .Move(_, fromIndex, toIndex):
+                case let .move(_, fromIndex, toIndex):
                     deletions.append(IndexPath(row: fromIndex, section: 0))
                     insertions.append(IndexPath(row: toIndex, section: 0))
-                case let .Update(_, index):
+                case let .update(_, index):
                     reloads.append(IndexPath(row: index, section: 0))
                 }
             }
@@ -149,7 +149,7 @@ func ==(lhs: DemoColor, rhs: DemoColor) -> Bool {
 
 [Dwifft](https://github.com/jflinter/Dwifft) - Diff based on the LCS problem. Inspired me to use the same enum name 'DiffStep'.
 
-[IGListKit](https://github.com/Instagram/IGListKit) - Uses diff which is also based on Paul Heckel paper. I copied the  concept of the protocol Diffable and a small optimization to avoid unnecessary moves.
+[IGListKit](https://github.com/Instagram/IGListKit) - Uses the same diff algorithm. I copied the concept of the protocol Diffable and a small optimization to avoid unnecessary moves.
 
 
 ## License
