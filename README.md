@@ -64,7 +64,7 @@ public enum DiffStep<T> {
 }
 ```
 
-**sortedSteps(fromArray:toArray:)** calculates Inserts, Deletes and Updates in a sorted way that can be applied to the old array to transform it into the new array.
+**sortedSteps(fromArray:toArray:)** calculates Inserts, Deletes and Updates in a sorted way that can be applied to the first array to transform it into the second array.
 
 ```swift
 let a = ["a", "b", "c", "d"]
@@ -72,7 +72,7 @@ let b = ["e", "a","d"]
 let steps = PHDiff.sortedSteps(fromArray: a, toArray: b)
 print(steps)
 //[Delete c at index: 2, Delete b at index: 1, Insert e at index: 0]
-print(a.apply(steps: steps)) // apply each operation to the array
+print(a.apply(steps: steps))
 //["e", "a", "d"]
 ```
 
