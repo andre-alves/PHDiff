@@ -11,8 +11,8 @@
 import Foundation
 
 public struct PHDiff {
-    /// Creates batch steps (Inserts, Deletes, Moves and Updates).
-    /// Use this method for UITableView, UICollectionView batch updates.
+    /// Creates steps (Inserts, Deletes, Moves and Updates) for batch operations.
+    /// Can be used for UITableView, UICollectionView batch updates.
     /// Complexity: O(n+m) where n is fromArray.count and m is toArray.count.
     public static func steps<T: Diffable>(fromArray: [T], toArray: [T]) -> [DiffStep<T>] {
         // Creates and setups one context.
@@ -59,16 +59,16 @@ public struct PHDiff {
         return steps
     }
 
-    /// Creates ordered steps (Inserts, Deletes and Updates) needed to transform fromArray to toArray.
+    /// Creates sorted steps (Inserts, Deletes and Updates) needed to transform fromArray to toArray.
     /// Complexity: O(n+m+d) where n is fromArray.count, m is toArray.count and d is the number of changes.
-    public static func orderedSteps<T: Diffable>(fromArray: [T], toArray: [T]) -> [DiffStep<T>] {
+    public static func sortedSteps<T: Diffable>(fromArray: [T], toArray: [T]) -> [DiffStep<T>] {
         var insertions: [DiffStep<T>] = []
         var updates: [DiffStep<T>] = []
         var indexedDeletions: [[DiffStep<T>]] = Array(repeating: [], count: fromArray.count)
 
-        let unorderedSteps = steps(fromArray: fromArray, toArray: toArray)
+        let unsortedSteps = steps(fromArray: fromArray, toArray: toArray)
 
-        for step in unorderedSteps {
+        for step in unsortedSteps {
             switch step {
             case .insert:
                 insertions.append(step)

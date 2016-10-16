@@ -27,7 +27,7 @@ To integrate PHDiff into your Xcode project using CocoaPods, specify it in your 
 use_frameworks!
 
 target '<Your Target Name>' do
-    pod 'PHDiff', :git => 'https://github.com/andre-alves/PHDiff.git', :tag => '1.0.1'
+    pod 'PHDiff', :git => 'https://github.com/andre-alves/PHDiff.git', :tag => '1.0.2'
 end
 ```
 
@@ -36,7 +36,7 @@ end
 To integrate PHDiff into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "andre-alves/PHDiff" == 1.0.1
+github "andre-alves/PHDiff" == 1.0.2
 ```
 
 Run `carthage update` to build the framework and drag the built `PHDiff.framework` into your Xcode project.
@@ -53,7 +53,7 @@ Depending of the installation method, you may need to import PHDiff in the files
 ```swift
 import PHDiff
 ```
-PHDiff provides two methods: **orderedSteps(fromArray:toArray:)** and **steps(fromArray:toArray:)** and they both return an array of DiffSteps:
+PHDiff provides two methods: **sortedSteps(fromArray:toArray:)** and **steps(fromArray:toArray:)** and they both return an array of DiffSteps:
 
 ```swift
 public enum DiffStep<T> {
@@ -64,12 +64,12 @@ public enum DiffStep<T> {
 }
 ```
 
-**orderedSteps(fromArray:toArray:)** calculates Inserts, Deletes and Updates in a ordered way that can be applied to the old array to transform it into the new array.
+**sortedSteps(fromArray:toArray:)** calculates Inserts, Deletes and Updates in a sorted way that can be applied to the old array to transform it into the new array.
 
 ```swift
 let a = ["a", "b", "c", "d"]
 let b = ["e", "a","d"]
-let steps = PHDiff.orderedSteps(fromArray: a, toArray: b)
+let steps = PHDiff.sortedSteps(fromArray: a, toArray: b)
 print(steps)
 //[Delete c at index: 2, Delete b at index: 1, Insert e at index: 0]
 print(a.apply(steps: steps)) // apply each operation to the array
@@ -116,7 +116,7 @@ print(a.apply(steps: steps)) // apply each operation to the array
 **Important:**
 
 - Both methods are linear in complexity and space.
-- Do **not** apply the result from steps(fromArray:toArray:) to the 'fromArray'. The result is not ordered in a way that it expects the indexes offset changes caused by each other step. If you need this type of result, use **orderedSteps** instead.
+- Do **not** apply the result from steps(fromArray:toArray:) to the 'fromArray'. The result is not sorted in a way that it expects the indexes offset changes caused by each other step. If you need this type of result, use **sortedSteps** instead.
 
 
 In order to diff your models, they need to conform to the Diffable protocol:

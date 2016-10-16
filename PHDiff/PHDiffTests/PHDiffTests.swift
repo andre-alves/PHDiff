@@ -18,47 +18,47 @@ final class PHDiffTests: XCTestCase {
 
         oldArray = ["a", "b", "c"]
         newArray = ["a", "b", "c"]
-        steps = PHDiff.orderedSteps(fromArray: oldArray, toArray: newArray)
+        steps = PHDiff.sortedSteps(fromArray: oldArray, toArray: newArray)
         XCTAssertTrue(oldArray.apply(steps: steps) == newArray)
 
         oldArray = []
         newArray = ["a", "b", "c", "d", "e"]
-        steps = PHDiff.orderedSteps(fromArray: oldArray, toArray: newArray)
+        steps = PHDiff.sortedSteps(fromArray: oldArray, toArray: newArray)
         XCTAssertTrue(oldArray.apply(steps: steps) == newArray)
 
         oldArray = ["a", "b", "c", "c", "c"]
         newArray = []
-        steps = PHDiff.orderedSteps(fromArray: oldArray, toArray: newArray)
+        steps = PHDiff.sortedSteps(fromArray: oldArray, toArray: newArray)
         XCTAssertTrue(oldArray.apply(steps: steps) == newArray)
 
         oldArray = ["a", "b", "c", "c", "c"]
         newArray = ["e", "b", "c", "d", "a"]
-        steps = PHDiff.orderedSteps(fromArray: oldArray, toArray: newArray)
+        steps = PHDiff.sortedSteps(fromArray: oldArray, toArray: newArray)
         XCTAssertTrue(oldArray.apply(steps: steps) == newArray)
 
         oldArray = ["p", "U", "b", "A", "5", "F"]
         newArray = ["O", "w", "Z", "U"]
-        steps = PHDiff.orderedSteps(fromArray: oldArray, toArray: newArray)
+        steps = PHDiff.sortedSteps(fromArray: oldArray, toArray: newArray)
         XCTAssertTrue(oldArray.apply(steps: steps) == newArray)
 
         oldArray = ["p", "b", "U", "A", "5", "F"]
         newArray = ["O", "w", "Z", "U"]
-        steps = PHDiff.orderedSteps(fromArray: oldArray, toArray: newArray)
+        steps = PHDiff.sortedSteps(fromArray: oldArray, toArray: newArray)
         XCTAssertTrue(oldArray.apply(steps: steps) == newArray)
 
         oldArray = ["x", "E", "g", "B", "f", "o", "3", "m"]
         newArray = ["j", "f", "L", "L", "m", "V", "g", "Q", "1"]
-        steps = PHDiff.orderedSteps(fromArray: oldArray, toArray: newArray)
+        steps = PHDiff.sortedSteps(fromArray: oldArray, toArray: newArray)
         XCTAssertTrue(oldArray.apply(steps: steps) == newArray)
 
         oldArray = ["j", "E", "g", "B", "f", "o", "3", "m"]
         newArray = ["j", "f", "L", "L", "m", "V", "g", "Q", "1"]
-        steps = PHDiff.orderedSteps(fromArray: oldArray, toArray: newArray)
+        steps = PHDiff.sortedSteps(fromArray: oldArray, toArray: newArray)
         XCTAssertTrue(oldArray.apply(steps: steps) == newArray)
 
         oldArray = ["a", "b", "c", "c", "c"]
         newArray = ["e", "b", "c", "d", "a"]
-        steps = PHDiff.orderedSteps(fromArray: oldArray, toArray: newArray)
+        steps = PHDiff.sortedSteps(fromArray: oldArray, toArray: newArray)
         XCTAssertTrue(oldArray.apply(steps: steps) == newArray)
     }
 
@@ -70,7 +70,7 @@ final class PHDiffTests: XCTestCase {
             let oldArray = randomArray(length: randomNumber(0..<500))
             let newArray = randomArray(length: randomNumber(0..<500))
 
-            let steps = PHDiff.orderedSteps(fromArray: oldArray, toArray: newArray)
+            let steps = PHDiff.sortedSteps(fromArray: oldArray, toArray: newArray)
             let success = oldArray.apply(steps: steps) == newArray
             XCTAssertTrue(success)
 
@@ -87,7 +87,7 @@ final class PHDiffTests: XCTestCase {
         let newArray = randomArray(length: 1000)
 
         self.measure {
-            let _ = PHDiff.orderedSteps(fromArray: oldArray, toArray: newArray)
+            let _ = PHDiff.sortedSteps(fromArray: oldArray, toArray: newArray)
         }
     }
 }
