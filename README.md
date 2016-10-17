@@ -147,9 +147,9 @@ func ==(lhs: DemoColor, rhs: DemoColor) -> Bool {
 
 ## Acknowledgments
 
-[Dwifft](https://github.com/jflinter/Dwifft) - Inspired me to use the same enum name 'DiffStep'.
+[Dwifft](https://github.com/jflinter/Dwifft) - I used the same enum name 'DiffStep'.
 
-[IGListKit](https://github.com/Instagram/IGListKit) - I copied the concept of the protocol Diffable and a small optimization to avoid unnecessary steps.
+[IGListKit](https://github.com/Instagram/IGListKit) - I used the concept of the protocol Diffable and a small optimization to avoid unnecessary steps.
 
 
 ## License
