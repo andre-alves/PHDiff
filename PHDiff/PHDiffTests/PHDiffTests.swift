@@ -62,11 +62,25 @@ final class PHDiffTests: XCTestCase {
         XCTAssertTrue(oldArray.apply(steps: steps) == newArray)
     }
 
+    func testDiffUpdate() {
+        var oldArray: [TestUser] = []
+        var newArray: [TestUser] = []
+        var steps: [DiffStep<TestUser>] = []
+        var expectedSteps: [DiffStep<TestUser>] = []
+
+        oldArray = [TestUser(name: "1", age: 0), TestUser(name: "2", age: 0)]
+        newArray = [TestUser(name: "1", age: 0), TestUser(name: "2", age: 1)]
+        steps = PHDiff.sortedSteps(fromArray: oldArray, toArray: newArray)
+        expectedSteps = [.update(value: TestUser(name: "2", age: 1), index: 1)]
+        XCTAssertTrue(steps == expectedSteps)
+        XCTAssertTrue(oldArray.apply(steps: steps) == newArray, "simple update")
+    }
+
     func testRandomDiffs() {
-        let numberOfTests = 3000
+        let numberOfTests = 1000
 
         for i in 1...numberOfTests {
-            print("############### Random Test \(i) ###############")
+            print("############### Random Diff Test \(i) ###############")
             let oldArray = randomArray(length: randomNumber(0..<500))
             let newArray = randomArray(length: randomNumber(0..<500))
 
@@ -81,7 +95,7 @@ final class PHDiffTests: XCTestCase {
             }
         }
     }
-    
+
     func testDiffPerformance() {
         let oldArray = randomArray(length: 1000)
         let newArray = randomArray(length: 1000)

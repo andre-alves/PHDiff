@@ -22,8 +22,7 @@ public struct PHDiff {
         var deleteOffsets = Array(repeating: 0, count: fromArray.count)
         var runningOffset = 0
 
-        // Iterate old array records checking for deletes
-        // Incremement offset for each delete
+        // Find deletions and incremement offset for each delete
         for (j, ref) in context.OA.enumerated() {
             deleteOffsets[j] = runningOffset
             if ref.symbol != nil {
@@ -32,19 +31,17 @@ public struct PHDiff {
             }
         }
 
-        // Reset and track offsets from inserted items to calculate where items have moved
         runningOffset = 0
 
-        // Find inserts and moves
+        // Find inserts, moves and updates
         for (i, ref) in context.NA.enumerated() {
             if let j = ref.index {
-                // Check if there was a update
+                // Check if this object has changed
                 if context.toArray[i] != context.fromArray[j] {
                     steps.append(.update(value: context.toArray[i], index: i))
                 }
 
-                // Calculate the offset and determine if there was a move
-                // If the indexes match, ignore the index
+                // Checks for the current offset, if matches means that this move is not needed
                 let insertOffset = runningOffset
                 let deleteOffset = deleteOffsets[j]
                 if (j - deleteOffset + insertOffset) != i {

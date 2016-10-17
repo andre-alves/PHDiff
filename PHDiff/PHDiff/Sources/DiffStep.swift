@@ -8,7 +8,7 @@
 
 import Foundation
 
-public enum DiffStep<T> {
+public enum DiffStep<T: Equatable> {
     case insert(value: T, index: Int)
     case delete(value: T, index: Int)
     case move(value: T, fromIndex: Int, toIndex: Int)
@@ -63,7 +63,25 @@ public enum DiffStep<T> {
     }
 }
 
+extension DiffStep: Equatable {}
+
+public func ==<T>(lhs: DiffStep<T>, rhs: DiffStep<T>) -> Bool {
+    switch (lhs, rhs) {
+    case let (.insert(lhsValue, lhsIndex), .insert(rhsValue, rhsIndex)):
+        return lhsValue == rhsValue && lhsIndex == rhsIndex
+    case let (.delete(lhsValue, lhsIndex), .delete(rhsValue, rhsIndex)):
+        return lhsValue == rhsValue && lhsIndex == rhsIndex
+    case let (.move(lhsValue, lhsFromIndex, lhsToIndex), .move(rhsValue, rhsFromIndex, rhsToIndex)):
+        return lhsValue == rhsValue && lhsFromIndex == rhsFromIndex && lhsToIndex == rhsToIndex
+    case let (.update(lhsValue, lhsIndex), .update(rhsValue, rhsIndex)):
+        return lhsValue == rhsValue && lhsIndex == rhsIndex
+    default:
+        return false
+    }
+}
+
 extension DiffStep: CustomStringConvertible {
+    /// Used for debug.
     public var description: String {
         switch self {
         case let .insert(value, index):

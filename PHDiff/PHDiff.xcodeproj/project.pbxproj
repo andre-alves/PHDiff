@@ -16,6 +16,7 @@
 		DEB4ECAD1DB3E6D300FFA96B /* DiffStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB4ECA81DB3E6D300FFA96B /* DiffStep.swift */; };
 		DEB4ECAE1DB3E6D300FFA96B /* PHDiff.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB4ECA91DB3E6D300FFA96B /* PHDiff.swift */; };
 		DED4331D1DB3F2E700AFEF0A /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED4331C1DB3F2E700AFEF0A /* Random.swift */; };
+		DEFFD6CE1DB4FF4800CDCDDD /* TestUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFFD6CD1DB4FF4800CDCDDD /* TestUser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,7 @@
 		DEB4ECA81DB3E6D300FFA96B /* DiffStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiffStep.swift; sourceTree = "<group>"; };
 		DEB4ECA91DB3E6D300FFA96B /* PHDiff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHDiff.swift; sourceTree = "<group>"; };
 		DED4331C1DB3F2E700AFEF0A /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
+		DEFFD6CD1DB4FF4800CDCDDD /* TestUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestUser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				DED4331C1DB3F2E700AFEF0A /* Random.swift */,
+				DEFFD6CD1DB4FF4800CDCDDD /* TestUser.swift */,
 			);
 			path = "Test Helpers";
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 			files = (
 				DED4331D1DB3F2E700AFEF0A /* Random.swift in Sources */,
 				DEB4EC991DB3E63200FFA96B /* PHDiffTests.swift in Sources */,
+				DEFFD6CE1DB4FF4800CDCDDD /* TestUser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
