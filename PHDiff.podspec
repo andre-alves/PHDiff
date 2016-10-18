@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.name         = "PHDiff"
   s.version      = "1.0.3"
-  s.summary      = "Lightning fast array diff implementation in Swift, works with UITableView/UICollectionView."
+  s.summary      = "Lightning fast array diff implementation, works great with UITableView/UICollectionView updates."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
