@@ -16,8 +16,8 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "PHDiff"
-  s.version      = "1.0.2"
-  s.summary      = "Swift implementation of Paul Heckel's diff technique."
+  s.version      = "1.0.3"
+  s.summary      = "Lightning fast array diff implementation in Swift, works with UITableView/UICollectionView."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -27,9 +27,9 @@ Pod::Spec.new do |s|
   s.description  = <<-DESC
   A diff algorithm implementend in pure Swift based on Paul Heckel's paper: "A technique for isolating differences between files".
   It's a very fast algorithm with linear complexity in both time and space. 
-  Although the paper is about files, our focus is to diff arrays. Given two different arrays, A and B, what steps A has to do to become B?
-  PHDiff can answer that by providing the Inserts, Deletes, Moves and Updates. 
-  It can also provide batch updates for UITableView and UICollectionView changes. It's very simple to use and can be done right on the main queue because it's lightning fast.
+  Given two different arrays, A and B, what steps A has to make to become B?
+  PHDiff can answer that by calculating the needed Inserts, Deletes, Moves and Updates!
+  Works great with UITableView and UICollectionView and can be used right on the main queue.
                    DESC
 
   s.homepage     = "https://github.com/andre-alves/PHDiff"
@@ -65,6 +65,7 @@ Pod::Spec.new do |s|
 
   #  When using multiple platforms
   s.ios.deployment_target = "8.0"
+  s.osx.deployment_target = '10.11'
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #

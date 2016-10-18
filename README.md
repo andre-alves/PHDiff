@@ -27,7 +27,7 @@ To integrate PHDiff into your Xcode project using CocoaPods, specify it in your 
 use_frameworks!
 
 target '<Your Target Name>' do
-    pod 'PHDiff', :git => 'https://github.com/andre-alves/PHDiff.git', :tag => '1.0.2'
+    pod 'PHDiff', '~> 1.0'
 end
 ```
 
@@ -36,7 +36,7 @@ end
 To integrate PHDiff into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "andre-alves/PHDiff" == 1.0.2
+github "andre-alves/PHDiff" ~> 1.0
 ```
 
 Run `carthage update` to build the framework and drag the built `PHDiff.framework` into your Xcode project.
