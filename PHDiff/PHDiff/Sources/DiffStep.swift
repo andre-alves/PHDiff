@@ -8,7 +8,7 @@
 
 import Foundation
 
-public enum DiffStep<T: Equatable> {
+public enum DiffStep<T: Diffable> {
     case insert(value: T, index: Int)
     case delete(value: T, index: Int)
     case move(value: T, fromIndex: Int, toIndex: Int)

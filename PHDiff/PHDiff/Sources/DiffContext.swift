@@ -6,20 +6,34 @@
 //  Copyright © 2016 Andre Alves. All rights reserved.
 //
 
-// DiffContext is the initial setup of the OA and NA arrays. It is than processed to create the diff steps.
-// By the end of `setupContext`, the context is the state showed at the figure 1 of the Paul Heckel's paper.
-
 import Foundation
 
+/// DiffContext is the initial setup of the OA and NA arrays. It is than processed to create the diff steps.
+/// By the end of `setupContext`, the context is the state showed at the figure 1 of the Paul Heckel's paper.
 public final class DiffContext<T: Diffable> {
-    public private(set) var fromArray: [T] // O
-    public private(set) var toArray: [T] // N
+    /// Paul Heckel's paper O array.
+    public private(set) var fromArray: [T]
+
+    /// Paul Heckel's paper N array.
+    public private(set) var toArray: [T]
+
+    /// Paul Heckel's paper OA array.
     public private(set) var OA: [Reference] = []
+
+    /// Paul Heckel's paper NA array.
     public private(set) var NA: [Reference] = []
+
+    /// Paul Heckels's paper table.
     public private(set) var table: [T.HashType: Reference.Symbol] = [:]
 
-    /// Creates and setups the context.
-    /// Complexity: O(n+m) where n is fromArray.count and m is toArray.count.
+    /**
+     Creates and setups the context.
+
+     Complexity: **O(n+m)** where n is fromArray.count and m is toArray.count.
+
+     - parameter fromArray: The array to calculate from.
+     - parameter toArray: The array to calculate to.
+     */
     public init(fromArray: [T], toArray: [T]) {
         self.fromArray = fromArray
         self.toArray = toArray
@@ -27,8 +41,6 @@ public final class DiffContext<T: Diffable> {
     }
 
     private func setupContext() {
-        // The context setup is made in 5 passes.
-
         // First pass
         for obj in toArray {
             let symbol = table[obj.diffIdentifier] ?? Reference.Symbol()
@@ -80,6 +92,7 @@ public final class DiffContext<T: Diffable> {
     }
 }
 
+/// The `Reference` is used during context setup. It can points to the symbol table or array index.
 public enum Reference {
     public final class Symbol {
         public var oldCounter = 0 // OC

@@ -10,7 +10,7 @@
 		DEB4EC941DB3E63200FFA96B /* PHDiff.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEB4EC8A1DB3E63100FFA96B /* PHDiff.framework */; };
 		DEB4EC991DB3E63200FFA96B /* PHDiffTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB4EC981DB3E63200FFA96B /* PHDiffTests.swift */; };
 		DEB4EC9B1DB3E63200FFA96B /* PHDiff.h in Headers */ = {isa = PBXBuildFile; fileRef = DEB4EC8D1DB3E63100FFA96B /* PHDiff.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DEB4ECAA1DB3E6D300FFA96B /* Array+ApplyDiff.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB4ECA51DB3E6D300FFA96B /* Array+ApplyDiff.swift */; };
+		DEB4ECAA1DB3E6D300FFA96B /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB4ECA51DB3E6D300FFA96B /* ArrayExtensions.swift */; };
 		DEB4ECAB1DB3E6D300FFA96B /* Diffable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB4ECA61DB3E6D300FFA96B /* Diffable.swift */; };
 		DEB4ECAC1DB3E6D300FFA96B /* DiffContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB4ECA71DB3E6D300FFA96B /* DiffContext.swift */; };
 		DEB4ECAD1DB3E6D300FFA96B /* DiffStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB4ECA81DB3E6D300FFA96B /* DiffStep.swift */; };
@@ -36,7 +36,7 @@
 		DEB4EC931DB3E63200FFA96B /* PHDiffTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PHDiffTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEB4EC981DB3E63200FFA96B /* PHDiffTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHDiffTests.swift; sourceTree = "<group>"; };
 		DEB4EC9A1DB3E63200FFA96B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DEB4ECA51DB3E6D300FFA96B /* Array+ApplyDiff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+ApplyDiff.swift"; sourceTree = "<group>"; };
+		DEB4ECA51DB3E6D300FFA96B /* ArrayExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
 		DEB4ECA61DB3E6D300FFA96B /* Diffable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Diffable.swift; sourceTree = "<group>"; };
 		DEB4ECA71DB3E6D300FFA96B /* DiffContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiffContext.swift; sourceTree = "<group>"; };
 		DEB4ECA81DB3E6D300FFA96B /* DiffStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiffStep.swift; sourceTree = "<group>"; };
@@ -105,7 +105,7 @@
 		DEB4ECA41DB3E6D300FFA96B /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				DEB4ECA51DB3E6D300FFA96B /* Array+ApplyDiff.swift */,
+				DEB4ECA51DB3E6D300FFA96B /* ArrayExtensions.swift */,
 				DEB4ECA61DB3E6D300FFA96B /* Diffable.swift */,
 				DEB4ECA71DB3E6D300FFA96B /* DiffContext.swift */,
 				DEB4ECA81DB3E6D300FFA96B /* DiffStep.swift */,
@@ -237,7 +237,7 @@
 				DEB4ECAC1DB3E6D300FFA96B /* DiffContext.swift in Sources */,
 				DEB4ECAE1DB3E6D300FFA96B /* PHDiff.swift in Sources */,
 				DEB4ECAD1DB3E6D300FFA96B /* DiffStep.swift in Sources */,
-				DEB4ECAA1DB3E6D300FFA96B /* Array+ApplyDiff.swift in Sources */,
+				DEB4ECAA1DB3E6D300FFA96B /* ArrayExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

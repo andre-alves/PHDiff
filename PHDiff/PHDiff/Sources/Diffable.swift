@@ -26,6 +26,9 @@ public extension Diffable where Self: Hashable {
 extension String: Diffable {}
 extension Int: Diffable {}
 extension Int64: Diffable {}
+extension Int32: Diffable {}
+extension Int16: Diffable {}
+extension Int8: Diffable {}
 extension Double: Diffable {}
 extension Float: Diffable {}
 extension NSObject: Diffable {}

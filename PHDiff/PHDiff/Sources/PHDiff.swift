@@ -6,14 +6,21 @@
 //  Copyright © 2016 Andre Alves. All rights reserved.
 //
 
-// Based on Paul Heckel's paper: A technique for isolating differences between files (1978).
-
 import Foundation
 
+/// PHDiff is based on Paul Heckel's paper: A technique for isolating differences between files (1978).
 public struct PHDiff {
-    /// Creates steps (Inserts, Deletes, Moves and Updates) for batch operations.
-    /// Can be used for UITableView, UICollectionView batch updates.
-    /// Complexity: O(n+m) where n is fromArray.count and m is toArray.count.
+    /**
+     Creates steps (Inserts, Deletes, Moves and Updates) for batch operations.
+     
+     *Can be used for UITableView, UICollectionView batch updates.*
+
+     Complexity: **O(n+m)** where n is fromArray.count and m is toArray.count.
+
+     - parameter fromArray: The array to calculate the diff from.
+     - parameter toArray: The array to calculate the diff to.
+     - returns: the steps.
+     */
     public static func steps<T: Diffable>(fromArray: [T], toArray: [T]) -> [DiffStep<T>] {
         // Creates and setups one context.
         let context = DiffContext<T>(fromArray: fromArray, toArray: toArray)
@@ -42,9 +49,8 @@ public struct PHDiff {
                 }
 
                 // Checks for the current offset, if matches means that this move is not needed
-                let insertOffset = runningOffset
                 let deleteOffset = deleteOffsets[j]
-                if (j - deleteOffset + insertOffset) != i {
+                if (j - deleteOffset + runningOffset) != i {
                     steps.append(.move(value: context.toArray[i], fromIndex: j, toIndex: i))
                 }
             } else {
@@ -56,8 +62,15 @@ public struct PHDiff {
         return steps
     }
 
-    /// Creates sorted steps (Inserts, Deletes and Updates) needed to transform fromArray to toArray.
-    /// Complexity: O(n+m+d) where n is fromArray.count, m is toArray.count and d is the number of changes.
+    /**
+     Creates sorted steps (Inserts, Deletes and Updates) needed to transform fromArray to toArray.
+
+     Complexity: **O(n+m+d)** where n is fromArray.count, m is toArray.count and d is the number of changes.
+
+     - parameter fromArray: The array to calculate the diff from.
+     - parameter toArray: The array to calculate the diff to.
+     - returns: the sorted steps.
+     */
     public static func sortedSteps<T: Diffable>(fromArray: [T], toArray: [T]) -> [DiffStep<T>] {
         var insertions: [DiffStep<T>] = []
         var updates: [DiffStep<T>] = []

@@ -1,5 +1,5 @@
 //
-//  Array+ApplyDiff.swift
+//  ArrayExtensions.swift
 //  PHDiff
 //
 //  Created by Andre Alves on 10/13/16.
@@ -9,6 +9,16 @@
 import Foundation
 
 extension Array where Element: Diffable {
+    /**
+     Creates a new array by applying the diff steps.
+     
+     **IMPORTANT**: Be sure to apply only sorted steps.
+
+     Complexity: **O(nˆ2)**.
+
+     - parameter steps: The corresponding steps.
+     - returns: the new updated array.
+     */
     public func apply(steps: [DiffStep<Element>]) -> [Element] {
         var copy = self
 
