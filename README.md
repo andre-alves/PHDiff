@@ -2,7 +2,7 @@
 
 Is a very efficient **diff algorithm** implementend in Swift with linear complexity in both time and space.
 
-Based on Paul Heckel's paper: [A technique for isolating differences between files](http://dl.acm.org/citation.cfm?id=359467&dl=ACM&coll=DL&CFID=679858074&CFTOKEN=32818190).
+Based on Paul Heckel's paper: [A technique for isolating differences between files](http://documents.scribd.com/docs/10ro9oowpo1h81pgh1as.pdf).
 
 Given two different arrays, A and B, what steps A has to make to become B? 
 
