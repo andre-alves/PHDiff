@@ -53,7 +53,7 @@ Depending of the installation method, you may need to import PHDiff in the files
 ```swift
 import PHDiff
 ```
-PHDiff provides two methods: **sortedSteps(fromArray:toArray:)** and **steps(fromArray:toArray:)** and they both return an array of DiffSteps:
+PHDiff provides two methods: **PHDiff.sortedSteps(fromArray:toArray:)** and **PHDiff.steps(fromArray:toArray:)** and they both return an array of DiffSteps:
 
 ```swift
 public enum DiffStep<T> {
@@ -64,11 +64,11 @@ public enum DiffStep<T> {
 }
 ```
 
-**sortedSteps(fromArray:toArray:)** calculates Inserts, Deletes and Updates in a sorted way that can be applied to the first array to transform it into the second array.
+**PHDiff.sortedSteps(fromArray:toArray:)** calculates Inserts, Deletes and Updates in a sorted way that can be applied to the first array to transform it into the second array.
 
 ```swift
 let a = ["a", "b", "c", "d"]
-let b = ["e", "a","d"]
+let b = ["e", "a", "d"]
 let steps = PHDiff.sortedSteps(fromArray: a, toArray: b)
 print(steps)
 //[Delete c at index: 2, Delete b at index: 1, Insert e at index: 0]
@@ -76,7 +76,7 @@ print(a.apply(steps: steps))
 //["e", "a", "d"]
 ```
 
-**steps(fromArray:toArray:)** calculates Inserts, Deleted, Moves and Updates to be used only with batch operations (i.e: UITableView and UICollectionView batch updates).
+**PHDiff.steps(fromArray:toArray:)** calculates Inserts, Deleted, Moves and Updates to be used only with batch operations (i.e: UITableView and UICollectionView batch updates).
 
 ```swift
     private func updateTableView(newColors: [DemoColor]) {
@@ -143,6 +143,15 @@ func ==(lhs: DemoColor, rhs: DemoColor) -> Bool {
 ```
 
 *Note: if your model conforms to Hashable, it does not need to implement diffIdentifier.*
+
+
+## Performance
+
+Diffing two random generated arrays of length 1000 each:
+
+![Performance Test](http://i.imgur.com/15Gh5wf.png)
+
+*Tested on MacBook Pro (Retina, 13-inch, Mid 2014) - 2.6 GHz Intel Core i5.*
 
 
 ## Acknowledgments
