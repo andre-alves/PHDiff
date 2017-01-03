@@ -66,7 +66,7 @@ public final class DiffContext<T: Diffable> {
             }
         }
 
-        // Forth pass
+        // Fourth pass
         var i = 0
         while(i < NA.count-1) {
             if let j = NA[i].index, j+1 < OA.count {
