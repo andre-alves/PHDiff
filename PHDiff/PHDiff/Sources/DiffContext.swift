@@ -67,7 +67,7 @@ public final class DiffContext<T: Diffable> {
         }
 
         // Forth pass
-        var i = 1
+        var i = 0
         while(i < NA.count-1) {
             if let j = NA[i].index, j+1 < OA.count {
                 if NA[i+1].symbol != nil && NA[i+1].symbol === OA[j+1].symbol {
