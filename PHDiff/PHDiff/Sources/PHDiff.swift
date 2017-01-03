@@ -34,7 +34,7 @@ public struct PHDiff {
             deleteOffsets[j] = runningOffset
             if ref.symbol != nil {
                 steps.append(.delete(value: context.fromArray[j], index: j))
-                runningOffset += 1
+                runningOffset -= 1
             }
         }
 
@@ -49,9 +49,12 @@ public struct PHDiff {
                 }
 
                 // Checks for the current offset, if matches means that this move is not needed
-                let deleteOffset = deleteOffsets[j]
-                if (j - deleteOffset + runningOffset) != i {
+                let expectedOldIndex = j + runningOffset + deleteOffsets[j]
+                if expectedOldIndex != i {
                     steps.append(.move(value: context.toArray[i], fromIndex: j, toIndex: i))
+                    if expectedOldIndex > i {
+                        runningOffset += 1
+                    }
                 }
             } else {
                 steps.append(.insert(value: context.toArray[i], index: i))
