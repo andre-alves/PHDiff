@@ -65,6 +65,19 @@ final class PHDiffTests: XCTestCase {
         newArray = ["b", "c", "c"]
         steps = PHDiff.sortedSteps(fromArray: oldArray, toArray: newArray)
         XCTAssertEqual(steps, [ DiffStep.delete(value: "a", index: 0), DiffStep.insert(value: "c", index: 2) ])
+
+        oldArray = ["a", "b", "c"]
+        newArray = ["c", "a", "b"]
+        steps = PHDiff.steps(fromArray: oldArray, toArray: newArray)
+        XCTAssertEqual(steps, [ DiffStep.move(value: "c", fromIndex: 2, toIndex: 0)])
+
+        oldArray = ["a", "b", "c"]
+        newArray = ["b", "c", "a"]
+        steps = PHDiff.steps(fromArray: oldArray, toArray: newArray)
+        XCTAssertEqual(steps, [
+            DiffStep.move(value: "b", fromIndex: 1, toIndex: 0),
+            DiffStep.move(value: "c", fromIndex: 2, toIndex: 1),
+        ])
     }
 
     func testDiffUpdate() {
