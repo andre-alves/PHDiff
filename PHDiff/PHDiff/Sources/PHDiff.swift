@@ -45,7 +45,7 @@ public struct PHDiff {
             if let j = ref.index {
                 // Check if this object has changed
                 if context.toArray[i] != context.fromArray[j] {
-                    steps.append(.update(value: context.toArray[i], index: i))
+                    steps.append(.update(value: context.toArray[i], index: j))
                 }
 
                 // Checks for the current offset, if matches means that this move is not needed
@@ -56,6 +56,7 @@ public struct PHDiff {
                         runningOffset += 1
                     }
                 }
+
             } else {
                 steps.append(.insert(value: context.toArray[i], index: i))
                 runningOffset += 1
@@ -105,6 +106,6 @@ public struct PHDiff {
         // Deletions need to be sorted desc.
         let deletions = indexedDeletions.flatMap { $0.first }.reversed()
 
-        return deletions + insertions + updates
+        return updates + deletions + insertions
     }
 }
