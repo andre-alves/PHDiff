@@ -10,14 +10,14 @@ import Foundation
 @testable import PHDiff
 
 struct TestUser: Diffable {
+    let id: Int
     let name: String
-    let age: Int
 
-    var diffIdentifier: String {
-        return name
+    var diffIdentifier: Int {
+        return id
     }
 }
 
 func ==(lhs: TestUser, rhs: TestUser) -> Bool {
-    return lhs.name == rhs.name && lhs.age == rhs.age
+    return lhs.id == rhs.id && lhs.name == rhs.name
 }

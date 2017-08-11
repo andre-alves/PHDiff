@@ -86,12 +86,19 @@ final class PHDiffTests: XCTestCase {
         var steps: [DiffStep<TestUser>] = []
         var expectedSteps: [DiffStep<TestUser>] = []
 
-        oldArray = [TestUser(name: "1", age: 0), TestUser(name: "2", age: 0)]
-        newArray = [TestUser(name: "1", age: 0), TestUser(name: "2", age: 1)]
+        oldArray = [TestUser(id: 1, name: "a"), TestUser(id: 2, name: "a")]
+        newArray = [TestUser(id: 1, name: "a"), TestUser(id: 2, name: "A")]
         steps = PHDiff.sortedSteps(fromArray: oldArray, toArray: newArray)
-        expectedSteps = [.update(value: TestUser(name: "2", age: 1), index: 1)]
+        expectedSteps = [.update(value: TestUser(id: 2, name: "A"), index: 1)]
         XCTAssertTrue(steps == expectedSteps)
         XCTAssertTrue(oldArray.apply(steps: steps) == newArray, "simple update")
+
+        oldArray = [TestUser(id: 1, name: "b")]
+        newArray = [TestUser(id: 2, name: "a"), TestUser(id: 1, name: "B")]
+        steps = PHDiff.sortedSteps(fromArray: oldArray, toArray: newArray)
+        expectedSteps = [.update(value: TestUser(id: 1, name: "B"), index: 0), .insert(value: TestUser(id: 2, name: "a"), index: 0)]
+        XCTAssertTrue(steps == expectedSteps)
+        XCTAssertTrue(oldArray.apply(steps: steps) == newArray, "update uses old index")
     }
 
     func testRandomDiffs() {
