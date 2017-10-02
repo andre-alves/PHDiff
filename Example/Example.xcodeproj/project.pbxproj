@@ -16,11 +16,71 @@
 		DEB4ECC31DB3E7E600FFA96B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEB4ECC21DB3E7E600FFA96B /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		DE7A6CF31F82BB6F00D83639 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE7A6CE91F82BB6F00D83639 /* PHDiff.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DE7A6C661F82B52900D83639;
+			remoteInfo = PHDiff_iOS;
+		};
+		DE7A6CF51F82BB6F00D83639 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE7A6CE91F82BB6F00D83639 /* PHDiff.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DE7A6C6E1F82B52900D83639;
+			remoteInfo = PHDiff_iOSTests;
+		};
+		DE7A6CF71F82BB6F00D83639 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE7A6CE91F82BB6F00D83639 /* PHDiff.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DE7A6C821F82B53900D83639;
+			remoteInfo = PHDiff_macOS;
+		};
+		DE7A6CF91F82BB6F00D83639 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE7A6CE91F82BB6F00D83639 /* PHDiff.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DE7A6C8A1F82B53900D83639;
+			remoteInfo = PHDiff_macOSTests;
+		};
+		DE7A6CFB1F82BB6F00D83639 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE7A6CE91F82BB6F00D83639 /* PHDiff.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DE7A6C9E1F82B54700D83639;
+			remoteInfo = PHDiff_watchOS;
+		};
+		DE7A6CFD1F82BB6F00D83639 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE7A6CE91F82BB6F00D83639 /* PHDiff.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DE7A6CAB1F82B55700D83639;
+			remoteInfo = PHDiff_tvOS;
+		};
+		DE7A6CFF1F82BB6F00D83639 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE7A6CE91F82BB6F00D83639 /* PHDiff.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DE7A6CB31F82B55700D83639;
+			remoteInfo = PHDiff_tvOSTests;
+		};
+		DE7A6D011F82BB8800D83639 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE7A6CE91F82BB6F00D83639 /* PHDiff.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = DE7A6C651F82B52900D83639;
+			remoteInfo = PHDiff_iOS;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		DE5D1CB51DB3ECE300C616C4 /* PHDiff.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PHDiff.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE5D1CB81DB3EF1100C616C4 /* DemoColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoColor.swift; sourceTree = "<group>"; };
 		DE5D1CB91DB3EF1100C616C4 /* DemoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoTableViewController.swift; sourceTree = "<group>"; };
 		DE5D1CBC1DB3F13B00C616C4 /* RandomDemoColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomDemoColors.swift; sourceTree = "<group>"; };
+		DE7A6CE91F82BB6F00D83639 /* PHDiff.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PHDiff.xcodeproj; path = ../PHDiff/PHDiff.xcodeproj; sourceTree = "<group>"; };
 		DEB4ECB81DB3E7E600FFA96B /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEB4ECBB1DB3E7E600FFA96B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEB4ECC01DB3E7E600FFA96B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -40,9 +100,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DE7A6CEA1F82BB6F00D83639 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DE7A6CF41F82BB6F00D83639 /* PHDiff.framework */,
+				DE7A6CF61F82BB6F00D83639 /* PHDiff_iOSTests.xctest */,
+				DE7A6CF81F82BB6F00D83639 /* PHDiff.framework */,
+				DE7A6CFA1F82BB6F00D83639 /* PHDiff_macOSTests.xctest */,
+				DE7A6CFC1F82BB6F00D83639 /* PHDiff.framework */,
+				DE7A6CFE1F82BB6F00D83639 /* PHDiff.framework */,
+				DE7A6D001F82BB6F00D83639 /* PHDiff_tvOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		DEB4ECAF1DB3E7E600FFA96B = {
 			isa = PBXGroup;
 			children = (
+				DE7A6CE91F82BB6F00D83639 /* PHDiff.xcodeproj */,
 				DEB4ECBA1DB3E7E600FFA96B /* Example */,
 				DEB4ECB91DB3E7E600FFA96B /* Products */,
 				DEB4ECCD1DB3E85200FFA96B /* Frameworks */,
@@ -93,6 +168,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				DE7A6D021F82BB8800D83639 /* PBXTargetDependency */,
 			);
 			name = Example;
 			productName = Example;
@@ -106,7 +182,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Andre Alves";
 				TargetAttributes = {
 					DEB4ECB71DB3E7E600FFA96B = {
@@ -126,12 +202,70 @@
 			mainGroup = DEB4ECAF1DB3E7E600FFA96B;
 			productRefGroup = DEB4ECB91DB3E7E600FFA96B /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = DE7A6CEA1F82BB6F00D83639 /* Products */;
+					ProjectRef = DE7A6CE91F82BB6F00D83639 /* PHDiff.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				DEB4ECB71DB3E7E600FFA96B /* Example */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		DE7A6CF41F82BB6F00D83639 /* PHDiff.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = PHDiff.framework;
+			remoteRef = DE7A6CF31F82BB6F00D83639 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DE7A6CF61F82BB6F00D83639 /* PHDiff_iOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = PHDiff_iOSTests.xctest;
+			remoteRef = DE7A6CF51F82BB6F00D83639 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DE7A6CF81F82BB6F00D83639 /* PHDiff.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = PHDiff.framework;
+			remoteRef = DE7A6CF71F82BB6F00D83639 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DE7A6CFA1F82BB6F00D83639 /* PHDiff_macOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = PHDiff_macOSTests.xctest;
+			remoteRef = DE7A6CF91F82BB6F00D83639 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DE7A6CFC1F82BB6F00D83639 /* PHDiff.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = PHDiff.framework;
+			remoteRef = DE7A6CFB1F82BB6F00D83639 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DE7A6CFE1F82BB6F00D83639 /* PHDiff.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = PHDiff.framework;
+			remoteRef = DE7A6CFD1F82BB6F00D83639 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DE7A6D001F82BB6F00D83639 /* PHDiff_tvOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = PHDiff_tvOSTests.xctest;
+			remoteRef = DE7A6CFF1F82BB6F00D83639 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		DEB4ECB61DB3E7E600FFA96B /* Resources */ = {
@@ -158,6 +292,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DE7A6D021F82BB8800D83639 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PHDiff_iOS;
+			targetProxy = DE7A6D011F82BB8800D83639 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		DEB4ECBF1DB3E7E600FFA96B /* Main.storyboard */ = {
@@ -189,6 +331,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -239,6 +382,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
