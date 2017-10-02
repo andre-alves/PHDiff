@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:PHDiff/PHDiff.xcodeproj">
+      location = "group:PHDiff.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Example/Example.xcodeproj">

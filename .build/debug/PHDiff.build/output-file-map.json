@@ -1,0 +1,35 @@
+{
+  "": {
+    "swift-dependencies": "/Users/andre.alves/Documents/Works/PHDiff/.build/debug/PHDiff.build/master.swiftdeps"
+  },
+  "/Users/andre.alves/Documents/Works/PHDiff/Sources/ArrayExtensions.swift": {
+    "dependencies": "/Users/andre.alves/Documents/Works/PHDiff/.build/debug/PHDiff.build/ArrayExtensions.d",
+    "object": "/Users/andre.alves/Documents/Works/PHDiff/.build/debug/PHDiff.build/ArrayExtensions.swift.o",
+    "swiftmodule": "/Users/andre.alves/Documents/Works/PHDiff/.build/debug/PHDiff.build/ArrayExtensions~partial.swiftmodule",
+    "swift-dependencies": "/Users/andre.alves/Documents/Works/PHDiff/.build/debug/PHDiff.build/ArrayExtensions.swiftdeps"
+  },
+  "/Users/andre.alves/Documents/Works/PHDiff/Sources/Diffable.swift": {
+    "dependencies": "/Users/andre.alves/Documents/Works/PHDiff/.build/debug/PHDiff.build/Diffable.d",
+    "object": "/Users/andre.alves/Documents/Works/PHDiff/.build/debug/PHDiff.build/Diffable.swift.o",
+    "swiftmodule": "/Users/andre.alves/Documents/Works/PHDiff/.build/debug/PHDiff.build/Diffable~partial.swiftmodule",
+    "swift-dependencies": "/Users/andre.alves/Documents/Works/PHDiff/.build/debug/PHDiff.build/Diffable.swiftdeps"
+  },
+  "/Users/andre.alves/Documents/Works/PHDiff/Sources/DiffContext.swift": {
+    "dependencies": "/Users/andre.alves/Documents/Works/PHDiff/.build/debug/PHDiff.build/DiffContext.d",
+    "object": "/Users/andre.alves/Documents/Works/PHDiff/.build/debug/PHDiff.build/DiffContext.swift.o",
+    "swiftmodule": "/Users/andre.alves/Documents/Works/PHDiff/.build/debug/PHDiff.build/DiffContext~partial.swiftmodule",
+    "swift-dependencies": "/Users/andre.alves/Documents/Works/PHDiff/.build/debug/PHDiff.build/DiffContext.swiftdeps"
+  },
+  "/Users/andre.alves/Documents/Works/PHDiff/Sources/DiffStep.swift": {
+    "dependencies": "/Users/andre.alves/Documents/Works/PHDiff/.build/debug/PHDiff.build/DiffStep.d",
+    "object": "/Users/andre.alves/Documents/Works/PHDiff/.build/debug/PHDiff.build/DiffStep.swift.o",
+    "swiftmodule": "/Users/andre.alves/Documents/Works/PHDiff/.build/debug/PHDiff.build/DiffStep~partial.swiftmodule",
+    "swift-dependencies": "/Users/andre.alves/Documents/Works/PHDiff/.build/debug/PHDiff.build/DiffStep.swiftdeps"
+  },
+  "/Users/andre.alves/Documents/Works/PHDiff/Sources/PHDiff.swift": {
+    "dependencies": "/Users/andre.alves/Documents/Works/PHDiff/.build/debug/PHDiff.build/PHDiff.d",
+    "object": "/Users/andre.alves/Documents/Works/PHDiff/.build/debug/PHDiff.build/PHDiff.swift.o",
+    "swiftmodule": "/Users/andre.alves/Documents/Works/PHDiff/.build/debug/PHDiff.build/PHDiff~partial.swiftmodule",
+    "swift-dependencies": "/Users/andre.alves/Documents/Works/PHDiff/.build/debug/PHDiff.build/PHDiff.swiftdeps"
+  }
+}

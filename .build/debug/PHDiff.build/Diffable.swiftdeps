@@ -1,0 +1,194 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "Diffable"
+provides-nominal:
+- "P6PHDiff8Diffable"
+- "SS"
+- "Si"
+- "Vs5Int64"
+- "Vs5Int32"
+- "Vs5Int16"
+- "Vs4Int8"
+- "Sd"
+- "Sf"
+- "CSo8NSObject"
+provides-member:
+- ["P6PHDiff8Diffable", ""]
+- ["SS", ""]
+- ["Si", ""]
+- ["Vs5Int64", ""]
+- ["Vs5Int32", ""]
+- ["Vs5Int16", ""]
+- ["Vs4Int8", ""]
+- ["Sd", ""]
+- ["Sf", ""]
+- ["CSo8NSObject", ""]
+- ["P6PHDiff8Diffable", "diffIdentifier"]
+provides-dynamic-lookup:
+depends-top-level:
+- "Diffable"
+- "Double"
+- "Equatable"
+- "Float"
+- "Hashable"
+- "Int"
+- "Int16"
+- "Int32"
+- "Int64"
+- "Int8"
+- "NSObject"
+- "String"
+depends-member:
+- ["Ps16AbsoluteValuable", "diffIdentifier"]
+- ["Ps9AnyObject", "diffIdentifier"]
+- ["Ps19BinaryFloatingPoint", "diffIdentifier"]
+- ["Ps17BitwiseOperations", "diffIdentifier"]
+- ["Ps7CVarArg", "diffIdentifier"]
+- ["Ps10Comparable", "diffIdentifier"]
+- ["Ps28CustomDebugStringConvertible", "diffIdentifier"]
+- ["Ps29CustomPlaygroundQuickLookable", "diffIdentifier"]
+- ["Ps17CustomReflectable", "diffIdentifier"]
+- ["Ps23CustomStringConvertible", "diffIdentifier"]
+- ["P6PHDiff8Diffable", "HashType"]
+- ["P6PHDiff8Diffable", "Hashable"]
+- ["P6PHDiff8Diffable", "Self"]
+- ["P6PHDiff8Diffable", "diffIdentifier"]
+- ["P6PHDiff8Diffable", ""]
+- ["Sd", "HashType"]
+- ["Sd", "deinit"]
+- ["Sd", "diffIdentifier"]
+- ["Ps9Equatable", "HashType"]
+- ["Ps9Equatable", "Hashable"]
+- ["Ps9Equatable", "Self"]
+- ["Ps9Equatable", "diffIdentifier"]
+- ["Ps9Equatable", ""]
+- ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "diffIdentifier"]
+- ["Ps25ExpressibleByFloatLiteral", "diffIdentifier"]
+- ["Ps27ExpressibleByIntegerLiteral", "diffIdentifier"]
+- ["Ps26ExpressibleByStringLiteral", "diffIdentifier"]
+- ["Ps33ExpressibleByUnicodeScalarLiteral", "diffIdentifier"]
+- ["Sf", "HashType"]
+- ["Sf", "deinit"]
+- ["Sf", "diffIdentifier"]
+- ["Ps13FloatingPoint", "diffIdentifier"]
+- ["Ps8Hashable", "Self"]
+- ["Ps8Hashable", "diffIdentifier"]
+- ["Si", "HashType"]
+- ["Si", "deinit"]
+- ["Si", "diffIdentifier"]
+- ["Vs5Int16", "HashType"]
+- ["Vs5Int16", "deinit"]
+- ["Vs5Int16", "diffIdentifier"]
+- ["Vs5Int32", "HashType"]
+- ["Vs5Int32", "deinit"]
+- ["Vs5Int32", "diffIdentifier"]
+- ["Vs5Int64", "HashType"]
+- ["Vs5Int64", "deinit"]
+- ["Vs5Int64", "diffIdentifier"]
+- ["Vs4Int8", "HashType"]
+- ["Vs4Int8", "deinit"]
+- ["Vs4Int8", "diffIdentifier"]
+- ["Ps7Integer", "diffIdentifier"]
+- ["Ps17IntegerArithmetic", "diffIdentifier"]
+- ["Ps25LosslessStringConvertible", "diffIdentifier"]
+- ["Ps10MirrorPath", "diffIdentifier"]
+- ["CSo8NSObject", "HashType"]
+- ["CSo8NSObject", "deinit"]
+- ["CSo8NSObject", "diffIdentifier"]
+- ["PSo16NSObjectProtocol", "diffIdentifier"]
+- ["Ps13SignedInteger", "diffIdentifier"]
+- ["Ps12SignedNumber", "diffIdentifier"]
+- ["Ps10Strideable", "diffIdentifier"]
+- ["SS", "HashType"]
+- ["SS", "deinit"]
+- ["SS", "diffIdentifier"]
+- ["Ps16TextOutputStream", "diffIdentifier"]
+- ["Ps20TextOutputStreamable", "diffIdentifier"]
+- ["Ps15_CVarArgAligned", "diffIdentifier"]
+- ["Ps22_CVarArgPassedAsDouble", "diffIdentifier"]
+- ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "diffIdentifier"]
+- ["Ps33_ExpressibleByBuiltinFloatLiteral", "diffIdentifier"]
+- ["Ps35_ExpressibleByBuiltinIntegerLiteral", "diffIdentifier"]
+- ["Ps34_ExpressibleByBuiltinStringLiteral", "diffIdentifier"]
+- ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "diffIdentifier"]
+- ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "diffIdentifier"]
+- ["Ps33_ExpressibleByStringInterpolation", "diffIdentifier"]
+- ["Ps9_Hashable", "Self"]
+- ["Ps9_Hashable", "diffIdentifier"]
+- ["Ps14_Incrementable", "diffIdentifier"]
+- ["Ps8_Integer", "diffIdentifier"]
+- ["Ps18_IntegerArithmetic", "diffIdentifier"]
+- ["Ps21_ObjectiveCBridgeable", "diffIdentifier"]
+- ["Ps14_SignedInteger", "diffIdentifier"]
+- ["Ps11_Strideable", "diffIdentifier"]
+depends-nominal:
+- "Ps16AbsoluteValuable"
+- "Ps9AnyObject"
+- "Ps19BinaryFloatingPoint"
+- "Ps17BitwiseOperations"
+- "Ps7CVarArg"
+- "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- "Ps29CustomPlaygroundQuickLookable"
+- "Ps17CustomReflectable"
+- "Ps23CustomStringConvertible"
+- "P6PHDiff8Diffable"
+- "Sd"
+- "Ps9Equatable"
+- "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
+- "Ps25ExpressibleByFloatLiteral"
+- "Ps27ExpressibleByIntegerLiteral"
+- "Ps26ExpressibleByStringLiteral"
+- "Ps33ExpressibleByUnicodeScalarLiteral"
+- "Sf"
+- "Ps13FloatingPoint"
+- "Ps8Hashable"
+- "Si"
+- "Vs5Int16"
+- "Vs5Int32"
+- "Vs5Int64"
+- "Vs4Int8"
+- "Ps7Integer"
+- "Ps17IntegerArithmetic"
+- "Ps25LosslessStringConvertible"
+- "Ps10MirrorPath"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- "Ps13SignedInteger"
+- "Ps12SignedNumber"
+- "Ps10Strideable"
+- "SS"
+- "Ps16TextOutputStream"
+- "Ps20TextOutputStreamable"
+- "Ps15_CVarArgAligned"
+- "Ps22_CVarArgPassedAsDouble"
+- "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- "Ps33_ExpressibleByBuiltinFloatLiteral"
+- "Ps35_ExpressibleByBuiltinIntegerLiteral"
+- "Ps34_ExpressibleByBuiltinStringLiteral"
+- "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
+- "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- "Ps33_ExpressibleByStringInterpolation"
+- "Ps9_Hashable"
+- "Ps14_Incrementable"
+- "Ps8_Integer"
+- "Ps18_IntegerArithmetic"
+- "Ps21_ObjectiveCBridgeable"
+- "Ps14_SignedInteger"
+- "Ps11_Strideable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreText.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
+interface-hash: "d6f089860be65308df475fac1ca8b901"

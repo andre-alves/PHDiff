@@ -1,0 +1,8 @@
+version: "Apple Swift version 3.1 (swiftlang-802.0.53 clang-802.0.42)"
+options: "13a3d3f656cab5abda1c391d2f729a89"
+build_time: [560284855, 494504000]
+inputs:
+  "/Users/andre.alves/Documents/Works/PHDiff/Example/Example/AppDelegate.swift": !dirty [529951974, 0]
+  "/Users/andre.alves/Documents/Works/PHDiff/Example/Example/DemoColor.swift": !dirty [529954811, 0]
+  "/Users/andre.alves/Documents/Works/PHDiff/Example/Example/DemoTableViewController.swift": !dirty [530296518, 0]
+  "/Users/andre.alves/Documents/Works/PHDiff/Example/Example/RandomDemoColors.swift": !dirty [529960713, 0]
