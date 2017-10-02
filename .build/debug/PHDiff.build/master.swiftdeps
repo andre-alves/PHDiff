@@ -1,9 +1,0 @@
-version: "Apple Swift version 3.1 (swiftlang-802.0.53 clang-802.0.42)"
-options: "cd3f4b65ef0a425fddf0f26e16ec2366"
-build_time: [560285397, 847209000]
-inputs:
-  "/Users/andre.alves/Documents/Works/PHDiff/Sources/ArrayExtensions.swift": [560284345, 0]
-  "/Users/andre.alves/Documents/Works/PHDiff/Sources/Diffable.swift": [530298179, 0]
-  "/Users/andre.alves/Documents/Works/PHDiff/Sources/DiffContext.swift": [536771130, 0]
-  "/Users/andre.alves/Documents/Works/PHDiff/Sources/DiffStep.swift": [530298179, 0]
-  "/Users/andre.alves/Documents/Works/PHDiff/Sources/PHDiff.swift": [560280776, 0]
