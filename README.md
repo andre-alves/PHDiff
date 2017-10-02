@@ -13,6 +13,7 @@ PHDiff can answer that by calculating the needed Inserts, Deletes, Moves and Upd
 
 ## Requirements
 
+- iOS 8.0+ / macOS 10.10+ / tvOS 9.0+ / watchOS 2.0+
 - Xcode 8.0+
 - Swift 3.0+
 
@@ -40,6 +41,19 @@ github "andre-alves/PHDiff" ~> 1.0
 ```
 
 Run `carthage update` to build the framework and drag the built `PHDiff.framework` into your Xcode project.
+
+
+### Swift Package Manager
+
+The [Swift Package Manager](https://swift.org/package-manager/) is a tool for automating the distribution of Swift code and is integrated into the `swift` compiler. 
+
+Once you have your Swift package set up, adding PHDiff as a dependency is as easy as adding it to the `dependencies` value of your `Package.swift`.
+
+```swift
+dependencies: [
+    .Package(url: "https://github.com/andre-alves/PHDiff.git", majorVersion: 1)
+]
+```
 
 ### Manually
 
