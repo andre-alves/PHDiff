@@ -16,6 +16,58 @@
 		DEB4ECC31DB3E7E600FFA96B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEB4ECC21DB3E7E600FFA96B /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		DE0C09081F82CE2300670D68 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE7A6CE91F82BB6F00D83639 /* PHDiff.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DE7A6C661F82B52900D83639;
+			remoteInfo = PHDiff_iOS;
+		};
+		DE0C090A1F82CE2300670D68 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE7A6CE91F82BB6F00D83639 /* PHDiff.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DE7A6C6E1F82B52900D83639;
+			remoteInfo = PHDiff_iOSTests;
+		};
+		DE0C090C1F82CE2300670D68 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE7A6CE91F82BB6F00D83639 /* PHDiff.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DE7A6C821F82B53900D83639;
+			remoteInfo = PHDiff_macOS;
+		};
+		DE0C090E1F82CE2300670D68 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE7A6CE91F82BB6F00D83639 /* PHDiff.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DE7A6C8A1F82B53900D83639;
+			remoteInfo = PHDiff_macOSTests;
+		};
+		DE0C09101F82CE2300670D68 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE7A6CE91F82BB6F00D83639 /* PHDiff.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DE7A6C9E1F82B54700D83639;
+			remoteInfo = PHDiff_watchOS;
+		};
+		DE0C09121F82CE2300670D68 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE7A6CE91F82BB6F00D83639 /* PHDiff.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DE7A6CAB1F82B55700D83639;
+			remoteInfo = PHDiff_tvOS;
+		};
+		DE0C09141F82CE2300670D68 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE7A6CE91F82BB6F00D83639 /* PHDiff.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DE7A6CB31F82B55700D83639;
+			remoteInfo = PHDiff_tvOSTests;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		DE5D1CB51DB3ECE300C616C4 /* PHDiff.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PHDiff.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE5D1CB81DB3EF1100C616C4 /* DemoColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoColor.swift; sourceTree = "<group>"; };
@@ -41,6 +93,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DE0C08FF1F82CE2200670D68 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DE0C09091F82CE2300670D68 /* PHDiff.framework */,
+				DE0C090B1F82CE2300670D68 /* PHDiff_iOSTests.xctest */,
+				DE0C090D1F82CE2300670D68 /* PHDiff.framework */,
+				DE0C090F1F82CE2300670D68 /* PHDiff_macOSTests.xctest */,
+				DE0C09111F82CE2300670D68 /* PHDiff.framework */,
+				DE0C09131F82CE2300670D68 /* PHDiff.framework */,
+				DE0C09151F82CE2300670D68 /* PHDiff_tvOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		DEB4ECAF1DB3E7E600FFA96B = {
 			isa = PBXGroup;
 			children = (
@@ -108,7 +174,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Andre Alves";
 				TargetAttributes = {
 					DEB4ECB71DB3E7E600FFA96B = {
@@ -128,12 +194,70 @@
 			mainGroup = DEB4ECAF1DB3E7E600FFA96B;
 			productRefGroup = DEB4ECB91DB3E7E600FFA96B /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = DE0C08FF1F82CE2200670D68 /* Products */;
+					ProjectRef = DE7A6CE91F82BB6F00D83639 /* PHDiff.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				DEB4ECB71DB3E7E600FFA96B /* Example */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		DE0C09091F82CE2300670D68 /* PHDiff.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = PHDiff.framework;
+			remoteRef = DE0C09081F82CE2300670D68 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DE0C090B1F82CE2300670D68 /* PHDiff_iOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = PHDiff_iOSTests.xctest;
+			remoteRef = DE0C090A1F82CE2300670D68 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DE0C090D1F82CE2300670D68 /* PHDiff.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = PHDiff.framework;
+			remoteRef = DE0C090C1F82CE2300670D68 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DE0C090F1F82CE2300670D68 /* PHDiff_macOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = PHDiff_macOSTests.xctest;
+			remoteRef = DE0C090E1F82CE2300670D68 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DE0C09111F82CE2300670D68 /* PHDiff.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = PHDiff.framework;
+			remoteRef = DE0C09101F82CE2300670D68 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DE0C09131F82CE2300670D68 /* PHDiff.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = PHDiff.framework;
+			remoteRef = DE0C09121F82CE2300670D68 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DE0C09151F82CE2300670D68 /* PHDiff_tvOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = PHDiff_tvOSTests.xctest;
+			remoteRef = DE0C09141F82CE2300670D68 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		DEB4ECB61DB3E7E600FFA96B /* Resources */ = {
@@ -182,7 +306,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -190,7 +316,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
@@ -233,7 +363,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -241,7 +373,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
@@ -278,7 +414,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.andre.alves.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -292,7 +428,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.andre.alves.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "PHDiff"
-  s.version      = "1.0.7"
+  s.version      = "1.1.0"
   s.summary      = "Lightning fast array diff implementation, works great with UITableView/UICollectionView updates."
 
   # This description is used to generate tags and improve search results.
