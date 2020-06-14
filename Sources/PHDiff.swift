@@ -104,7 +104,7 @@ public struct PHDiff {
         // insertions.sort { $0.index < $1.index }
 
         // Deletions need to be sorted desc.
-        let deletions = indexedDeletions.flatMap { $0.first }.reversed()
+        let deletions = indexedDeletions.compactMap { $0.first }.reversed()
 
         return updates + deletions + insertions
     }

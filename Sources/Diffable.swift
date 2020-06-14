@@ -18,7 +18,7 @@ public protocol Diffable: Equatable {
 }
 
 public extension Diffable where Self: Hashable {
-    public var diffIdentifier: Self {
+    var diffIdentifier: Self {
         return self
     }
 }
