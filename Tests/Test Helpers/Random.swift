@@ -10,7 +10,7 @@ import Foundation
 
 func randomArray(length: Int) -> [String] {
     let charactersString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-    let charactersArray: [Character] = Array(charactersString.characters)
+    let charactersArray: [Character] = Array(charactersString)
 
     var array: [String] = []
     for _ in 0..<length {
