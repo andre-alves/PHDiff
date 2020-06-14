@@ -14,8 +14,8 @@ PHDiff can answer that by calculating the needed Inserts, Deletes, Moves and Upd
 ## Requirements
 
 - iOS 8.0+ / macOS 10.10+ / tvOS 9.0+ / watchOS 2.0+
-- Xcode 8.0+
-- Swift 3.0+
+- Xcode 11.0+
+- Swift 5.0+
 
 
 ## Installation
@@ -51,7 +51,7 @@ Once you have your Swift package set up, adding PHDiff as a dependency is as eas
 
 ```swift
 dependencies: [
-    .Package(url: "https://github.com/andre-alves/PHDiff.git", majorVersion: 1)
+    .package(url: "https://github.com/andre-alves/PHDiff.git", .upToNextMajor(from: "1.1.0"))
 ]
 ```
 
